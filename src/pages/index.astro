@@ -1,5 +1,23 @@
 ---
 
+import { Button } from '../components/Button'
+
+export async function get() {
+ console.log('YAYYAYAA')
+return {
+
+  body: JSON.stringify([{ id: 1, title: "abc" }]),
+
+};
+
+}
+const aaa = 'hello'
+
+const funcCli = () => {
+	console.log('FROM THE INSIDE')
+}
+
+// console.log
 ---
 
 <html lang="en">
@@ -14,5 +32,8 @@
 		<a href="/">Home</a>
 		<a href="/about/">About</a>
 		<h1>Astro333</h1>
+		<h1>{aaa}</h1>
+		<Button client:load label="Privet" onClick={funcCli}/>
+		<hr />
 	</body>
 </html>
